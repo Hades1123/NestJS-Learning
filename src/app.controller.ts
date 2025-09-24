@@ -14,7 +14,7 @@ export class AppController {
 		private readonly authService: AuthService,
 	) { }
 
-	@UseGuards(LocalAuthGuard)
+	// @UseGuards(LocalAuthGuard)
 	@Post('/login')
 	handleLogin(@Request() req) {
 		return this.authService.login(req.user)
